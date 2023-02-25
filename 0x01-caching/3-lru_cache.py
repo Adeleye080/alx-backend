@@ -20,6 +20,8 @@ class LRUCache(BaseCaching):
             print("DISCARD: {}".format(self.recency[0]))
             del self.cache_data[self.recency[0]]
             del self.recency[0]
+        if key in self.recency:
+            del self.rencency[self.recency.index(key)]
         self.item_order.append(key)
         self.cache_data[key] = item
 
