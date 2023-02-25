@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
+""" FIFOCache module
+"""
 from base_caching import BaseCaching
-""" FIFOCache module """
 
 
 class FIFOCache(BaseCaching):
-    """ First In First Out caching system """
+    """
+    First In First Out caching system
+    """
     def __init__(self):
         """ initializes class attribute and superclass """
         super().__init__()

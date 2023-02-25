@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+""" BasicCache module
+"""
 from base_caching import BaseCaching
-""" BasicCache module """
 
 
 class BasicCache(BaseCaching):
@@ -12,18 +13,24 @@ class BasicCache(BaseCaching):
         get: retrieves a cache data
     """
     def __init__(self):
-        """ initializes super class """
+        """
+        initializes super class
+        """
         super().__init__()
 
     def put(self, key, item):
-        """ add data in cache """
+        """
+        Add data in cache
+        """
         if key is None or item is None:
             pass
         else:
             self.cache_data[key] = item
 
     def get(self, key):
-        """ retrieves data from cache """
+        """
+        Retrieves data from cache
+        """
         if key is None or key not in self.cache_data.keys():
             return None
         else:
