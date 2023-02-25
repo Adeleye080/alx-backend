@@ -13,7 +13,7 @@ class BasicCache(BaseCaching):
     """
     def __init__(self):
         """ initializes super class """
-        super.__init__(self)
+        super().__init__()
 
     def put(self, key, item):
         """ add data in cache """
