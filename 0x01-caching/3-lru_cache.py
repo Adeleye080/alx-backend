@@ -22,7 +22,7 @@ class LRUCache(BaseCaching):
             del self.recency[0]
         if key in self.recency:
             del self.rencency[self.recency.index(key)]
-        self.item_order.append(key)
+        self.recency.append(key)
         self.cache_data[key] = item
 
     def get(self, key):
